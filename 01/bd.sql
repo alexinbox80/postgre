@@ -96,7 +96,7 @@ CREATE TABLE orders (
 
 CREATE TABLE order_statuses (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(30) NOT NULL UNIQUE
+  status VARCHAR(30) NOT NULL UNIQUE
 );
 
 CREATE TABLE payment (
@@ -104,7 +104,7 @@ CREATE TABLE payment (
   method VARCHAR(120) NOT NULL UNIQUE
 );
 
-CREATE TABLE delivery_address (
+CREATE TABLE profile (
   id SERIAL PRIMARY KEY,
   user_id INT NOT NULL,
   delivery_id INT NOT NULL,
@@ -137,7 +137,7 @@ CREATE TABLE product_review (
 
 CREATE TABLE product_review_statuses (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(30) NOT NULL UNIQUE
+  status VARCHAR(30) NOT NULL UNIQUE
 );
 
 CREATE TABLE store_review (
@@ -151,7 +151,7 @@ CREATE TABLE store_review (
 
 CREATE TABLE store_review_statuses (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(30) NOT NULL UNIQUE
+  status VARCHAR(30) NOT NULL UNIQUE
 );
 
 CREATE TABLE showcase (
@@ -164,5 +164,5 @@ CREATE TABLE showcase (
 
 CREATE TABLE showcase_statuses (
   id SERIAL PRIMARY KEY,
-  name VARCHAR(30) NOT NULL UNIQUE
+  status VARCHAR(30) NOT NULL UNIQUE
 );
