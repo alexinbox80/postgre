@@ -34,4 +34,53 @@
     10) Для одного из запросов, созданных в пункте 6, провести оптимизацию. В качестве отчета приложить
     планы выполнения запроса, ваш анализ и показать действия, которые улучшили эффективность запроса.
 
+
+
+    Для решения используется БД Интернет - магазина eShop
+
+    со следующими сущностями:
+    users (id, role_id, first_name, last_name, email, password, phone, status_id, created_at, updated_at) – таблица с
+    покупателями (пользователями) интернет – магазина;
+
+    profile (id, user_id, delivery_id, index, city, street, house, flat, status_is, created_at, updated_at) – таблица
+    с адресами доставки покупателей;
+
+    roles (id, role) – таблица ролей пользователей (администраторы, пользователи, покупатели)
+
+    user_statuses (id, name) – статус пользователя (активный, отключенный);
+
+    goods (id, category_id, title, description, main_image_id, color, size, price, discount, quantity, status_id,
+    created_at, updated_at) – таблица с товарами (каталог товаров);
+
+    images (id, url, good_id, images, description, size, created_at, updated_at) – таблица с фотографиями товаров;
+
+    good_statuses (id, name) – таблица статусов товара (наличие, отсутствие);
+
+    categories (id, title, url, parent_id, created_at, updated_at) – таблица категорий товаров (для построения меню и пр.)
+
+    carts (id, user_id, good_id, price, quantity, status_id, created_at, updated_at) – таблица корзина с товарами;
+
+    cart_statuses (id, name) – статус корзины;
+
+    orders (id, user_id, payment_id, order_number, price, amount, created_at, updated_at) – таблица заказов;
+
+    order_statuses (id, status) – таблица статусов заказов (сформирован, оплачен, доставлен);
+
+    payment (id, method) – таблица способов оплаты;
+
+    delivery (id, company, created_at, updated_at) – таблица способов доставки;
+
+    product_review (id, good_id, user_name, review, status_id, created_at, updated_at) – таблица отзывов о товарах,
+    оставленных пользователями;
+
+    product_review_statuses (id, status) – таблица статусов отзывов (активный, отключенный);
+
+    store_review (id, user_name, review, status_id, created_at, updated_at) – таблица отзывов о магазине;
+
+    store_review_statuses (id, status) – таблица статусов отзывов магазина;
+
+    showcase (id, good_id, status_id, created_at, updated_at) – таблица витрина магазина;
+
+    showcase_statuses (id, status) – таблица статусов товаров в витрине магазина (отключен, активный);
+
 */
