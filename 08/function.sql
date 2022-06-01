@@ -49,17 +49,6 @@ FROM
 WHERE
   carts.good_id = product_id_maximum_number_photos();
 
-
-===================
-SELECT
-  COUNT(good_id), good_id
-FROM
-  images
-GROUP BY images.good_id
-ORDER BY COUNT(good_id) DESC
-LIMIT 1;
-
-
 SELECT
   good_id
 FROM
